@@ -1695,7 +1695,7 @@ Respond with JSON only, no markdown."""
 
         elif view == "read":
             ci=ss.active_chapter; mi=ss.active_material; chapter=chapters[ci]; mat=chapter["materials"][mi]; mat_title=mat["title"]
-            content_key = f"content_{ci}_{mi}_{cur_lang()}"
+            content_key = f"content_{active_idx}_{ci}_{mi}_{cur_lang()}"
             if content_key not in ss:
                 with st.spinner(f"{t('plan_generating_material')} '{mat_title}'..."):
                     try:
