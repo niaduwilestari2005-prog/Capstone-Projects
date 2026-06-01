@@ -1,0 +1,979 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "harni",
+      "created_at": "2026-05-27T08:00:09.805868"
+    },
+    {
+      "id": 2,
+      "username": "chagiya",
+      "created_at": "2026-05-27T08:23:18.642933"
+    },
+    {
+      "id": 3,
+      "username": "my",
+      "created_at": "2026-05-27T11:13:27.957858"
+    },
+    {
+      "id": 4,
+      "username": "nuu",
+      "created_at": "2026-05-27T11:21:26.427447"
+    },
+    {
+      "id": 5,
+      "username": "my?",
+      "created_at": "2026-05-27T11:25:42.011674"
+    },
+    {
+      "id": 6,
+      "username": "susanti",
+      "created_at": "2026-05-27T11:26:34.960869"
+    },
+    {
+      "id": 7,
+      "username": "bubub",
+      "created_at": "2026-05-27T11:27:07.081472"
+    },
+    {
+      "id": 8,
+      "username": "nii",
+      "created_at": "2026-05-27T13:57:59.317650"
+    },
+    {
+      "id": 9,
+      "username": "nia",
+      "created_at": "2026-05-31T10:12:59.346042"
+    }
+  ],
+  "sessions": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "name": "Machine Learning",
+      "topics": "Data Sains",
+      "level": "Beginner",
+      "deadline": "2026-05-29",
+      "progress": 93,
+      "last_checked": "27 May 2026",
+      "doc_text": "Sistem Pakar Diagnosa Penyakit Pada Tanaman Kedelai Hijau \nMenggunakan Metode Teorema Bayes \n \n \nDanu Fajar Nur Rosid, A.Sidiq Purnomo \nProgram Studi Informatika, Universitas Mercu Buana Yogyakarta, Gg. Jemb. Merah \nNo.84C, Soropadan, Condongcatur, Kec. Depok, Kabupaten Sleman, Daerah Istimewa \nYogyakarta  \n E-mail: danuufajar444@gmail.com, sidiq@mercubuana-yogya.ac.id \n \nABSTRAK \n \nPenanganan penyakit pada tanaman kedelai secara berkala sering kurang diperhatikan sehingga \nmembuat tanaman kedelai sering gagal panen, gagal panen yang terjadi membuat para petani panik \ndan tidak tahu apa yang harus dilakukan tanpa seorang pakar yang mendampingi. Oleh karena itu \ndalam penelitian ini penulis membuat sistem pakar dengan metode bayes sebagai alat mendete ksi \npenyakit pada tanaman kedelai sehingga dapat memberikan solusi atau penanganan sementara \nberupa cara untuk mengantisipasi terjadinya gagal panen sebelum ditanyakan langsung ke pada \nseorang pakar untuk penanganan lebih lanjut. Sistem pakar ini dibuat menggunakan sistem berbasis \nweb dengan keakuratan sebesar 86 %. \nKata kunci : Sistem Pakar, Penyakit Kedelai, Bayes, Web \n \nABSTRACT \n \nThe periodic handling of soybean plant diseases is often overlooked, leading to frequent \ncrop failures. These crop failures cause panic among farmers who are unsure of what to do \nwithout an expert's guidance. Therefore, in this research, the author has developed an expert \nsystem using the Bayesian method to detect diseases in soybean plants. This system can \nprovide temporary solutions or handling methods to anticipate crop failures before seeking \ndirect assistance from an expert. The expert system is created as a web-based system with \nan accuracy rate of 86%. \nKeywords: Expert System, Soybean Diseases, Bayesian, Web  \n \n \n \n \n \n \n \nhttps://doi.org/10.37817/ikraith-informatika.v8i2 \nP-ISSN 2580-4316 \nE-ISSN 2654-8054\n72\nIKRAITH-INFORMATIKA Vol 8 No 2 Juli 2024\n1. PENDAHULUAN \n \nKedelai atau Glycinemax merupakan \nsalah satu jenis tumbuhan atau tanaman \nkacang-kacangan semusim. Meskipun \nproduksi kedelai terutama berada di \ndaerah sedang, seperti Brazilia yang \nmerupakan salah satu produsen kedelai \nutama,tentu tidak menutup kemungkinan \nproduksi yang sangat besar dilakukan di \ndaerah tropika, seperti Indonesia. Namun \ndalam perjalanannya tidak sedikit petani \nkedelai yang mendapatkan masalah \nsehingga mengakibatkan hasil dari panen \nkurang maksimal. Oleh karena itu \ndibutuhkan suatu alat bantu yang dapat \nmendiagnosa penyakit pada tanaman \nkedelai hijau berupa sistem pakar. Sistem \npakar yang ditanamkan mengadopsi \nmetode bayes. Teorema Bayes adalah \nsebuah teorema dengan dua penafsiran \nberbeda, dalam penafsiran metode bayes, \nteorema ini menyatakan bahwa seberapa \njauh derajat kepercayaan subjektif harus \nberubah secara rasional ketika ada \npetunjuk baru. Web app adalah sebuah \naplikasi yang berada dalam web server \nyang bisa user akses melalui browser. \n \n2.\n  LANDASAN TEORI \n \nSistem Pakar \nSistem pakar adalah sistem komputer \nyang ditujukan untuk meniru semua \naspek atau kemampuan pengambilan \nkeputusan ( decision making ) seorang \npakar ( Rosnelly, 2016 ). \nSistem pakar merupakan salah satu \ndari beberapa domain masalah atau area \ndari Artificial Intelligence atau AI  dan \nmerupakan Sebuah program computer \npintar ( intelligent computer program ) \nyang memanfaatkan bahwa pengetahuan \natau (knowledge) dan prosedur inferensi \nuntuk memecahkan masalah yang cukup \nsulit sehingga membutuhkan keahlian \nkhusus \ndari manusia tersebut ( Budiharto \n& Suhartono, 2016 ). \n \nTanaman Kedelai \nKedelai adalah merupakan salah satu \ntanaman polong-polongan yang telah \ndibudidayakan sejak 3.500 tahun yang \nlalu di Asia Timur. Tanaman kedelai \ntelah lama diusahakan di Indonesia sejak \ntahun 1970 ( Salim, 2013 ).  \nKedelai merupakan komoditas yang \nkaya akan protein. Berperan sebagai \nsumber protein nabati yang sangat \npenting dalam rangka peningkatan gizi \nmasyarakat, karena selain aman bagi \nkesehatan juga sebagai sumber protein \nyang paling murah di dunia dibandingkan \ndengan sumber protein lainnya. Dalam \nkelompok tanaman pangan di Indonesia, \nkedelai merupakan komoditas terpenting \nketiga setelah padi dan jagung, \ndisamping sebagai bahan pakan dan \nindustri olahan. Kebutuhan akan kedelai \nterus meningkat seiring dengan \nkesadaran masyarakat tentang makanan \nsehat. Ketersediaan kedelai di Indonesia \nmenjadi penting karena hampir 90% \ndigunakan untuk bahan pangan ( Atman, \n2014 ). \nAdapun penyakit tanaman kedelai \ndiantaranya sebagai berikut : \n1. Karat Daun, penyakit karat daun \nadalah penyakit yang biasanya mulai \nmenyerang tanaman kedelai pada \numur 3 - 4 minggu. Daun yang \ndiserang biasanya adalah daun yang \nagak tua dan terdapat bintik bitnik \nkecil dibawah permukaan daun. \n2. Busuk Rhizoktonia, penyakit busuk \nrhizoctonia adalah penyakit yang  \nbiasanya lapisan akar akan \nmembentuk kanker cekung berwarna \ncoklat kemerahan setelah itu pangkal \nbatang dan perakaran menjadi busuk \nsehingga tanaman menjadi layu dan \nmati. \n3. Busuk Batang, penyakit busuk batang \nadalah penyakit yang biasanya \nmenyerang bagian batang tanaman \nhttps://doi.org/10.37817/ikraith-informatika.v8i2 \nP-ISSN 2580-4316 \nE-ISSN 2654-8054\nIKRAITH-INFORMATIKA Vol 8 No 2 Juli 2024\n73\nkedelai yang menyebabkan batang \ntersebut berwana kuning kecoklatan \ndan basah. \n4. Bercak Daun Target Spot, penyakit \nbercak daun target spot adalah \npenyakit yang terjadi pada kondisi \nkelembaban yang tinggi. Saat cuaca \nkering, penyakit ini tidak mudah \nmenyebar dan berkembang. \n5. Layu Bakteri, penyakit layu bakteri \nadalah penyakit yang biasanya bila \nterkena penyakit ini maka tanaman ini \nakan mengering dan mati. Seperti \npenyakit yang lain penyakit ini akan \nmenyebar pada saat lembab. \n6. Kerdil, adalah penyakit yang bila \nterserang penyakit ini maka tanaman \nakan kerdil, warna daun akan lebih \nhijau disbanding daun normal dan \ndaun muda tampak keritig dan kasar. \n7. Antraknosa, adalah penyakit yang \nmenyerang bagian benih yang baru di \ntanam. Hal itu mengakibatkan proses \nperkecambahan biji terganggu bahkan \nbenih tidak dapat tumbuh. \n \nTeorema Bayes \nTeorema Bayes adalah sebuah metode  \nteorema dengan dua penafsiran berbeda, \ndalam penafsiran Bayes, teorema ini \nmenyatakan bahwa seberapa jauh derajat \nkepercayaan subjektif harus berubah \nsecara rasional ketika ada petunjuk baru, \nd\nalam penafsiran frekuentis, teorema ini \nmenjelaskan bahwa representasi invers \nprobabilitas dua kejadian. Berikut adalah \nbentuk teorema bayes : \n1. Envidence Tunggal (E) dan hipotesis \ntunggal (H) \n \na. 𝐏(𝐇|𝐄) =\n𝐏(𝐄|𝐇)𝐱𝐏(𝐇)\n𝐏(𝐄)  \nKeterangan : \nP(H|E) = probabilitas hipotesis H \nterjadi jika envidence E terjadi \nP(E|H) = probabilitas munculnya \nenvidence E jika hipotesis H \nterjadi \nP(H) = probabilitas hipotesis H \ntanpa memandang envidence \napapun \nP(E) = probabilitas envidence E \ntanpa memandang apapun \n2. Envidence tunggal (E) dan hipotesis \nganda (H1, H2,...Hn) \n \na. 𝐏(𝐇𝐢|𝐄) =\n𝐏(𝐄|𝐇) 𝐱 𝐏(𝐇)\n∑ 𝐏 (𝐄|𝐇) 𝐱 𝐏(𝐇𝐤)\n𝐧\n𝐤=𝟏\n \nKeterangan \nP(Hi|E) = probabilitas hipotesis \nHi benar terjadi jika diberikan \nenvidence E \nP(Ei|H) = probabilitas munculnya \nenvidence E jika diketahui \nhipotesis Hi Benar \nP(Ei|H) = hipotesis Hi benar \nterjadi Hi ( menurut hasil \nsebelumnya tanpa memandang \nenvidence apapun \nN = jumlah hipotesis yang \nmungkin \n3. Envidence ganda dan hipotesis ganda \n \na. 𝐏(𝐇𝐢|𝐄𝟏𝐄𝟐….𝐄𝐦) =\n𝐏(𝐄𝟏|𝐇𝐢) 𝐱 𝐏(𝐄𝟐|𝐇𝐢) 𝐱 ...𝐏(𝐄𝟏|𝐇𝐢) 𝐱 𝐏(𝐇)\n∑ 𝐏(𝐄 𝟏𝐄𝟐….𝐄𝐦|𝐇𝐤)  𝐱 𝐏(𝐇𝐤)𝐧\n𝐤=𝟏\n \nAkan tetapi bahwa  pengeplikasian \ntersebut tidak mungkin terjadi \nkarena harus mengetahui semua \nprobabilitas bersyarat dari semua \nkombinasi, maka persamaan \ntersebut sudah diganti dengan \npersamaan. \nhttps://doi.org/10.37817/ikraith-informatika.v8i2 \nP-ISSN 2580-4316 \nE-ISSN 2654-8054\n74\nIKRAITH-INFORMATIKA Vol 8 No 2 Juli 2024\nb. 𝐏(𝐇𝐢|𝐄𝟏𝐄𝟐….𝐄𝐦) =\n𝐏(𝐄𝟏|𝐇𝐢) 𝐱 𝐏(𝐄𝟐|𝐇𝐢) 𝐱…𝐱 𝐏(𝐄𝒎|𝐇𝐢) 𝐱 𝐏(𝐇)\n∑ 𝐏 (𝐄𝟏|𝐇𝐢) 𝐱 𝐏(𝐄𝟐|𝐇𝒌) 𝐱…𝐱 𝐏(𝐄𝒎|𝐇𝒌) 𝐱 𝐏(𝐇)𝐧 \n𝐤=𝟏\n \nContoh Kasus : \nPetani A mengeluhkan tanaman \nkedelai dengan gejala menyerang \nsetiap fase pertumbuhan dan \nmunculnya bercak klorotik kecil \npada daun. \nPerhitungan : \n𝐏(𝐇𝐢|𝐄𝟏𝐄𝟐)\n= 𝟎, 𝟗 𝐱 𝟎, 𝟗 𝐱 𝟎, 𝟑\n𝟎, 𝟐𝟒𝟑 = 𝟎, 𝟗 \n \n3. METODELOGI \n \nJalan Penelitian \nPenelitian ini akan mengembangkan \nsebuah sistem pakar untuk mendiagnosa \npenyakit tanaman kedelai dengan alur \npenelitian sebagai berikut : \n \nGambar 1. Alur Penelitian \n \nAkuisisi Pengetahuan Pakar \nAkuisisi Pengetahuan merupakan \nkegiatan mengumpulkan dan mencari \ndata untuk analisis kebutuhan perangkat \nlunak yang bersumber dari seorang \npakar. \n \nAnalisis Kebutuhan Masukan \nAdapun Analisis Kebutuhan Masukan \nyang diberikan seorang pakar mengenai \nkebutuhan penelitian adalah : \na) Data deskripsi penyakit pada tanaman \nkedelai. \nb) Data gejala penyakit pada tanaman \nkedelai. \nc) Data penanganan atau solusi yang \ndapat dilakukan jika tanaman kedelai \nterdiagnosa terserang penyakit \nd) Data nilai pembobotan gejala dan \npenyakit pada tanaman kedelai \n \nAnalisis Kebutuhan Proses \nSistem ini akan melakukan penalaran \nuntuk menentukan diagnose penyakit \nkedelai dari berdasarkan kasus yang \ndimasukan dengan metode teorema \nbayes. Dengan ini sistem pakar akan \nmenyeleksi tiap gejala terhadap penyakit \ndan memberikan diagnose kemungkinan \npenyakit kedelai berdasarkan gejala yang \ndimasukkan sebelumnya. \n \nAnalisis Kebutuhan Keluaran \nData keluaran sistem ini adalah hasil \nperhitungan dari data pokok yang telah \ndilakukan menggunakan metode teorema \nbayes berdasarkan gejala gejala yang ada \ndi pemriksaan. \n \nhttps://doi.org/10.37817/ikraith-informatika.v8i2 \nP-ISSN 2580-4316 \nE-ISSN 2654-8054\nIKRAITH-INFORMATIKA Vol 8 No 2 Juli 2024\n75\nFlowchart Sistem \nFlowchart Sistem adalah flowchart \nyang menampilkan tahapan atau proses \nkerja yang sedang berlangsung di dalam \nsistem ini. \n \nGambar 2. Flowchart Sistem \n \nUse Case Diagram \nBerikut ini merupakan bentuk dari \nuse case diagram perancangan sistem \nyang dibangun. \n \nGambar 3. Use Case Diagram User \n \nActivity Diagram \nBerikut ini merupakan bentuk dari \nactivity diagram menu diagnosa. \n \nGambar 4. Activity Diagram menu \nDiagnosa \n \nPerancangan Class Diagram \nRancangan class diagram aplikasi \nsistem pakar ini seperti berikut : \n \nGambar 5. Class Diagram \n \nPerancangan Antarmuka \nBerikut ini merupakan bentuk dari \nperancangan antarmuka menu diagnosa. \n \nGambar 6. Menu Diagnosa \nhttps://doi.org/10.37817/ikraith-informatika.v8i2 \nP-ISSN 2580-4316 \nE-ISSN 2654-8054\n76\nIKRAITH-INFORMATIKA Vol 8 No 2 Juli 2024\nBerikut ini merupakan bentuk dari \nperancangan antarmuka menu hasil \ndiagnosa. \n \nGambar 7. Hasil Diagnosa \n \nPerancangan Basis Pengetahuan \nDasar Pengetahuan adalah merupakan \ninti dari program sistem pakar ini karena \nmerupakan presentasi pengetahuan yang \nmenyimpan dasar dasar aturan dan data \ntentang penyakit kedelai yang bersumber \ndari pakar. Berikut ini adalah proses \nindexing yang digunakan dalam aplikasi. \nRekomendasi Pakar \nRekomendasi merupakan solusi atau \nsaran yang diberikan kepada pengguna \nsistem atas hasil diagnosa yang telah \ndilakukan. \nTabel 1. Rekomendasi Pakar \nPenyakit Saran \nKarat Daun a. Penggunaan \nvarietas yang \ntoleran \nb. Perendaman benih \ndalam larutan \nfungisida \n \nBusuk Rhizoktonia a. Perbaikan drainase \ndan pengapuran. \nb. Penyemprotan \ndengan fungisida \nsesuai aturan. \nBusuk Batang a. Membuat drainase \nyang baik. \nb. Penyemprotan \nfungisida \n \nBercak Daun Target \nSpot \na. Sanitasi dan \nmenjaga \nkebersihan area \ntanaman. \nb. Memusnahkan \ntanaman \nterinfeksi. \n \nLayu Bakteri a. Menggunakan \nbenih yang toleran. \nb. Sanitasi dan \nmenjaga \nkebersihan lahan. \nKerdil a. Penyemprotan \npestisida yang \nsesuai anjuran. \nb. Memusnahkan \ntanaman yang \nterinfeksi. \n \nAntraknosa a. Memusnahkan \ntanaman yang \nterinfeksi \nb. Penyemprotan \nfungisida.  \n \n           \nNilai Probabilitas Bayes untuk \nPenyakit / P(Hi) \nNilai probabilitas Bayes untuk gejala \napapun. Adapun nilai probabilitas Bayes \ntersebut di dapat dari pakar yang terkait \npenyakit adalah nilai kemungkinan \nterjadinya penyakit (Hi) tanpa melihat \ndengan sistem pakar yang dibuat. \nTabel 2. Nilai Probabilitas Penyakit \nNo Penyakit Nilai \nH1 Karat Daun 0.3 \nH2 Busuk Rhizoctonia 0.9 \nH3 Busuk Batang 0.9 \nH4 Bercak Daun Target \nSpot \n0.3 \nH5 Layu Bakteri 0.9 \nH6 Kerdil 0.7 \nH7 Antraknosa 0.3 \n \nhttps://doi.org/10.37817/ikraith-informatika.v8i2 \nP-ISSN 2580-4316 \nE-ISSN 2654-8054\nIKRAITH-INFORMATIKA Vol 8 No 2 Juli 2024\n77\nNilai Probabilitas Bayes untuk Gejala \n/ P(E|Hi) \nTabel 3. Nilai Probabilitas Penyakit \nTerhadap Gejala \nNo Gejala Penyakit \nE1 Menyerang \nsetiap fase \npertumbuhan \n8 8 8 8 8 8 8 \nE2 Munculnya \nbercak klorotik \nkecil yang tidak \nberaturan pada \npermukaan daun \n \n9 4  4   2 \nE3 Bercak kecil \nberwarna coklat \nkemerahan \nmirip karat \n \n9  4 4 4  4 \nE4 Bercak \nkemudian \nberubah \nmenjadi coklat \natau coklat tua \ndan membentuk \nbisul-bisul \n \n9  2 2    \nE5 Terjadi busuk \n(hawar) di dekat \nakar \n \n 9 5  2  2 \nE6 Pada kondisi \nsangat lembab \ndaun-daun akan \nlengket satu \nsama lain, \nmenyerupai \nsarang laba-laba \n \n 9 4    2 \nE7 Pada daun, \nbatang, timbul \nhawar dengan \narah serangan \ndari bawah ke \natas \n \n2 9 5 2 2 2 2 \nE8 Layu, \npangkalnya \nberubah warna \nmenjadi coklat \nkemerahan \n \n3 5 9 3 5  3 \nE9 Leher akarnya \ntampak jamur \nyang berwarna \nputih, kemudian \nmati \n \n 5 9 1 3   \nE10 Timbulnya \nbercak-bercak \nberwarna coklat \nkemerahan yang \nberukuran \nkurang lebih 10-\n15mm \n \n5   9 3  3 \nE11 Bercak tersebut \nkadang \nmembentuk \nlingkaran \nseperti pada \npapan tembak. \n \n5   9    \nE12 Dapat \nmenyerang \nhampir seluruh \nbagian tanaman \n \n4 4 4 9 6 6 4 \nE13 Tanaman \nkedelai terkena \npenyakit ini saat \nberumur 2-3 \nminggu \n \n3 3 3 3 9 2 3 \nE14 Tanaman layu \nsecara tiba-tiba \n \n 2 5  9  4 \nE15 Tanaman \nkedelai yang \nterkena penyakit \nini akan \nmengering dan \nmati \n \n 4 6 4 9  4 \nE16 Warna daun \nlebih hijau \ndibanding daun \nnormal \n \n2   4  9  \nE17 Warna daun \nberubah dari \nhijau menjadi \nkuning belang, \nterutama pada \nbagian pucuk. \n \n2   2  9  \nE18 Daun muda \ntampak keriting \ndan kasar \n \n4 2  4 2 9  \nE19 Pada batang \nakan timbul \nbintik-bintik \nhitam berupa \nduri-duri jamur \n \n2 4 4 4 2  9 \nE20 Tulang daun \npada permukaan \nbawah menebal \n4 4 6 4 4  9 \nhttps://doi.org/10.37817/ikraith-informatika.v8i2 \nP-ISSN 2580-4316 \nE-ISSN 2654-8054\n78\nIKRAITH-INFORMATIKA Vol 8 No 2 Juli 2024\ndengan warna \nkecoklatan \n \n \nMekanisme Inferensi Pengetahuan \nDalam perancangan sistem pakar ini \nmenggunakan metode teorema bayes. \nTeorema bayes dimulai dari mencari nilai \ntotal bobot gejala dari tiap penyakit lalu \nmenghitung nilai P(Hi) dilanjutkan \ndengan menghitung probabilitas (H) \ntanpa memandang evidence apap un \nbarulah mencari nilai P(E/Hi) da n \nlangkah terahir menjumlahkannya. \n \nPerhitungan Manual \nPerhitungan Manual yaitu merupakan \npemecahan kasus diagnosa yang \ndilakukan manual untuk mendapatkan \nhasil yang sama dengan aplikasi. \nContoh kasus : \nPada Lahan A terdapat tanaman \nkedelai yang terdeteksi terkena penyakit \ndegan gejala munculnya bercak klorotik \nkecil yang tidak beraturan pada \npermukaan daun dan bercak kecil \nberwarna coklat kemerahan mirip karat. \nPemecahan kasus : \nDiketahui : \nMunculnya bercak klorotik kecil yang \ntidak beraturan pada permukaan (E2) dan \nbercak kecil berwarna coklat kemerahan \nmirip karat (E3). \nDisini menggunakan rumus evidence \ntunggal dan hipotesis ganda rumus \nnomor 2, probabilitas gejala di semua \npenyakit: \n∑ 𝑃(𝐸𝑛 | 𝐻𝑘) x 𝑃(𝐻𝑘) \n𝑛\n𝑘=𝑖\n \n \na. (P(E2 | H1) x P(E3| H1) x P(H1)) + \n(P(E2 | H2) x P(E3| H2) x P(H2)) + \n(P(E2 | H3) x P(E3| H3) x P(H3)) + \n(P(E2 | H4) x P(E3| H4) x P(H4)) + \n(P(E2 | H5) x P(E3| H5) x P(H5)) + \n(P(E2 | H6) x P(E3| H6) x P(H6)) + \n(P(E2 | H7) x P(E3| H7) x P(H7)) \n= (9 x 9 x 0,3) + (4 x 0 x 0,9) + (0 x 4 x \n0,9) + (4 x 4 x  0,3 ) + (0 x 4 x 0,9) + (0 x \n0 x 0,7) + (2 x 4 x 0,3) \n= 24,3 + 0 + 0 + 4,8 + 0 + 0 + 2,4 \n= 31,5 \nProbabilitas gejala di setiap penyakit : \n𝑃(𝐻𝑖 | 𝐸) =  𝑃(𝐸𝑛|𝐻𝑘) x 𝑃(𝐻𝑘) \n∑ 𝑃(𝐸𝑛 | 𝐻𝑘) x 𝑃(𝐻𝑘)𝑛\n𝑘=1\n \nb. 𝑃(𝐻1 | 𝐸2𝐸3) =\n \n𝑃(𝐸2|𝐻1) x 𝑃(𝐸3|𝐻1) x 𝑃(𝐻1) \n∑ 𝑃(𝐸𝑛 | 𝐻𝑘) x 𝑃(𝐻𝑘)𝑛\n𝑘=1\n=\n \n(9 x 9 x 0,3) \n31,5    =  0,771 \nc. 𝑃(𝐻2 | 𝐸2𝐸3) =\n \n𝑃(𝐸2|𝐻2) x 𝑃(𝐸3|𝐻2) x 𝑃(𝐻2) \n∑ 𝑃(𝐸𝑛 | 𝐻𝑘) x 𝑃(𝐻𝑘)𝑛\n𝑘=\n1\n=\n \n(4 x 0 x 0,9) \n31,5    =  0 \nd. 𝑃(𝐻3 | 𝐸2𝐸3) =\n \n𝑃(𝐸2|𝐻3) x 𝑃(𝐸3|𝐻3) x 𝑃(𝐻3) \n∑ 𝑃(𝐸𝑛 | 𝐻𝑘) x 𝑃(𝐻𝑘)𝑛\n𝑘=\n1\n=\n \n(0 x 4 x 0,9) \n31,5    =  0 \ne. 𝑃(𝐻4 | 𝐸2𝐸3) =\n \n𝑃(𝐸2|𝐻4) x 𝑃(𝐸3|𝐻4) x 𝑃(𝐻4) \n∑ 𝑃(𝐸𝑛 | 𝐻𝑘) x 𝑃(𝐻𝑘)𝑛\n𝑘=\n1\n=\n \n(4 x 4 x  0,3 ) \n31,5    =  0,152 \nf. 𝑃(𝐻5 | 𝐸2𝐸3) =\n \n𝑃(𝐸2|𝐻5) x 𝑃(𝐸3|𝐻5) x 𝑃(𝐻5) \n∑ 𝑃(𝐸𝑛 | 𝐻𝑘) x 𝑃(𝐻𝑘)𝑛\n𝑘=\n1\n=\n \n(0 x 4 x 0,9)\n31,5    =  0 \nhttps://doi.org/10.37817/ikraith-informatika.v8i2 \nP-ISSN 2580-4316 \nE-ISSN 2654-8054\nIKRAITH-INFORMATIKA Vol 8 No 2 Juli 2024\n79\ng. 𝑃(𝐻6 | 𝐸2𝐸3) =\n \n𝑃(𝐸2|𝐻6) x 𝑃(𝐸3|𝐻6) x 𝑃(𝐻6) \n∑ 𝑃(𝐸𝑛 | 𝐻𝑘) x 𝑃(𝐻𝑘)𝑛\n𝑘=1\n=\n \n (0 x 0 x 0,7) \n31,5    =  0 \nh. 𝑃(𝐻7 | 𝐸2𝐸3) =\n \n𝑃(𝐸2|𝐻7) x 𝑃(𝐸3|𝐻7) x 𝑃(𝐻7) \n∑ 𝑃(𝐸𝑛 | 𝐻𝑘) x 𝑃(𝐻𝑘)𝑛\n𝑘=\n1\n=\n \n(2 x 4 x 0,3) \n31,5    =  0,076 \nHasil perhitungan  \nDari perhitungan diatas maka diambil \nkesimpulan bahwa hasil dari diagnosa \npenyakit tanaman kedelai dengan gejala \nMunculnya bercak klorotik kecil yang \ntidak beraturan pada permukaan  (E2)  \ndan bercak kecil berwarna coklat \nkemerahan mirip karat  (E3\n) adalah H 1 \natau penyakit karat daun  dengan nilai \nprobabilitas 0,771 \n \n4. HASIL DAN PEMBAHASAN \n \nHasil akan dilakukan setelah melewati \ntahap analisis dan perancangan sistem, \npada tahap ini aplikasi siap dioperasikan \npada keadaan yang sebenarnya sehingga \nakan diketahui program atau sistem yang \ndibuat dapat menghasilkan keluaran yang \ndiinginkan. \n \nInterface Menu Diagnosa \nMenu Diagnosa adalah menu untuk \nmelakukan konsultasi dengan sistem. \nPada menu ini terdapat pilihan gejala dan \ntombol proses untuk memproses gejala \nyang sudah dipilih. \n \nGambar 8. Interface Diagnosa \n \nInterface Menu Hasil Diagnosa \nMenu Hasil Diagnosa muncul setelah \npengguna memilih gejala gejala dan \nmenekan tombol proses pada menu \ndiagnosa yang berada pada sebelumnya. \nMenu ini akan menampilkan hasil berupa \nkemungkinan penyakit yang diderita  \ndengan menggunakan rumus teorema \nbayes \ndan cara penaganannya. \n \nGambar 9. Interface Hasil Diagnosa \n \nPengujian Hasil Diagnosa \nDari seluruh kemungkinan hasil \njawaban yang diambil 30 sampel untuk \nmenguji keakuratan hasil diagnosa sistem \ndengan hasil diagnosa pakar. dari 30 \nsampel menghasilkan 26 hasil yang sama \ndan 4 hasil yang berbeda atau tidak \nsesuai. Maka pengujian sistem ini \nmenghasilkan akurasi ketepatan sebesar \n86,6%. \nNilai akurasi = 26/30*100% = 86,6% \n \nhttps://doi.org/10.37817/ikraith-informatika.v8i2 \nP-ISSN 2580-4316 \nE-ISSN 2654-8054\n80\nIKRAITH-INFORMATIKA Vol 8 No 2 Juli 2024\n5. KESIMPULAN \n \nBerdasarkan hasil dari pembahasan \nperancangan aplikasi sistem pakar yang  \nberbasis Web, maka diambil kesimpulan \nsebagai berikut: \n1. Aplikasi sistem pakar diagnose \npenyakit kedelai ini menggunakan \nmetode bayes yang melakukan \nproses diagnosa dengan gejala-\ngejala yang telah diketahui untuk \nmemperoleh keputu san dengan \nkeakuratan sebesar 86% . \n2. Aplikasi sistem pakar kedelai ini \nmelakukan pengumpulan data \npenyakit tanaman kedelai, aplikasi \nini ditujukan untuk pengguna yang \ningin mengetahui tentang penyakit \ntanaman kedelai. \n \nDAFTAR PUSTAKA \n \nHafni, L., & Simanjuntak, M. (2018). \nSISTEM PAKAR DIAGNOSA \nPENYAKIT SINUSITIS \nMENGGUNAKAN METODE \nBAYES BERBASIS WEB. In JIK) \n(Vol. 2, Issue 1). \nHengki Tamando Sihotang. (2018). \nSistem Pakar Untuk Mendiagnosa \nPenyakit Pada Tanaman Jagung \nDengan Metode Bayes. Journal Of \nInformatic Pelita Nusantara, \n3(1), \n17–22. Morfologi Jagung \nKhairunnas, Gemasih, H., & Syahputra, \nH. (2022). RANCANG BANGUN \nSISTEM PAKAR PENYAKIT \nTANAMAN CABAI \nMENGGUNAKAN METODE \nNAIVE BAYES BERBASIS \nWEB. Jurnal Ilmu Teknik Dan \nTeknologi Maritim, \n1(3), 59–73. \nSalim Mahua, M. (2018). SISTEM \nPAKAR UNTUK \nMENDIAGNOSIS PENYAKIT \nTANAMAN JERUK (LIMAU) \nMENGGUNAKAN METODE \nBAYES. In Jurnal Mahasiswa \nTeknik Informatika \n(Vol. 2, Issue \n2). \nSalsabila, M. A. (2022). SISTEM \nPAKAR DIAGNOSA PENYAKIT \nTANAMAN HIDROPONIK \nMENGGUNAKAN METODE \nFORWARD CHAINING. \nJASISFO (Jurnal Sistem \nInformasi), \n3(1). \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \nhttps://doi.org/10.37817/ikraith-informatika.v8i2 \nP-ISSN 2580-4316 \nE-ISSN 2654-8054\nIKRAITH-INFORMATIKA Vol 8 No 2 Juli 2024\n81",
+      "doc_name": "jurnal kedelei ijau.pdf",
+      "chapters": [
+        {
+          "id": 0,
+          "title": "Pengantar Ilmu Data dan Lingkungan",
+          "materials": [
+            {
+              "id": 0,
+              "title": "Apa itu Ilmu Data?",
+              "duration": 45,
+              "type": "lesson",
+              "done": true
+            },
+            {
+              "id": 1,
+              "title": "Peran Ilmuwan Data dan Keterampilan yang Dibutuhkan",
+              "duration": 60,
+              "type": "lesson",
+              "done": true
+            },
+            {
+              "id": 2,
+              "title": "Pengantar Python untuk Ilmu Data (Dasar-dasar Python)",
+              "duration": 90,
+              "type": "lesson",
+              "done": true
+            },
+            {
+              "id": 3,
+              "title": "Mengatur Lingkungan Pengembangan (Anaconda, Jupyter Notebook)",
+              "duration": 60,
+              "type": "lesson",
+              "done": true
+            },
+            {
+              "id": 4,
+              "title": "Quiz Chapter 1: Pengantar",
+              "duration": 30,
+              "type": "quiz",
+              "done": true
+            }
+          ]
+        },
+        {
+          "id": 1,
+          "title": "Pengumpulan dan Pemrosesan Data",
+          "materials": [
+            {
+              "id": 0,
+              "title": "Jenis dan Sumber Data (Terstruktur vs. Tidak Terstruktur)",
+              "duration": 60,
+              "type": "lesson",
+              "done": true
+            },
+            {
+              "id": 1,
+              "title": "Pengantar Library Pandas untuk Manipulasi Data",
+              "duration": 90,
+              "type": "lesson",
+              "done": true
+            },
+            {
+              "id": 2,
+              "title": "Pembersihan Data: Menangani Nilai Hilang dan Duplikat",
+              "duration": 75,
+              "type": "lesson",
+              "done": true
+            },
+            {
+              "id": 3,
+              "title": "Transformasi Data: Normalisasi dan Encoding Kategorikal",
+              "duration": 75,
+              "type": "lesson",
+              "done": true
+            },
+            {
+              "id": 4,
+              "title": "Quiz Chapter 2: Pemrosesan Data",
+              "duration": 30,
+              "type": "quiz",
+              "done": true
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Analisis Data Deskriptif dan Visualisasi",
+          "materials": [
+            {
+              "id": 0,
+              "title": "Statistik Deskriptif Dasar (Mean, Median, Modus, Standar Deviasi)",
+              "duration": 60,
+              "type": "lesson",
+              "done": true
+            },
+            {
+              "id": 1,
+              "title": "Pengantar Visualisasi Data dengan Matplotlib dan Seaborn",
+              "duration": 90,
+              "type": "lesson",
+              "done": true
+            },
+            {
+              "id": 2,
+              "title": "Membuat Berbagai Jenis Plot (Histogram, Scatter Plot, Bar Chart)",
+              "duration": 75,
+              "type": "lesson",
+              "done": true
+            },
+            {
+              "id": 3,
+              "title": "Interpretasi Visualisasi Data dan Cerita Data",
+              "duration": 60,
+              "type": "lesson",
+              "done": true
+            },
+            {
+              "id": 4,
+              "title": "Quiz Chapter 3: Analisis & Visualisasi",
+              "duration": 30,
+              "type": "quiz",
+              "done": false
+            }
+          ]
+        }
+      ],
+      "created_at": "2026-05-27T08:01:32.193134"
+    },
+    {
+      "id": 2,
+      "user_id": 2,
+      "name": "Kerkom",
+      "topics": "Data Maining",
+      "level": "Beginner",
+      "deadline": "2026-05-29",
+      "progress": 0,
+      "last_checked": "27 May 2026",
+      "doc_text": "",
+      "doc_name": "",
+      "chapters": [],
+      "streak": 1,
+      "plan_generated": false,
+      "created_at": "2026-05-27T11:08:10.668735"
+    },
+    {
+      "id": 3,
+      "user_id": 3,
+      "name": "UAS",
+      "topics": "ML",
+      "level": "Beginner",
+      "deadline": "2026-05-27",
+      "progress": 25,
+      "last_checked": "27 May 2026",
+      "doc_text": "Perancangan sistem informasi manajemen kredit nasabah pada bank \nBRI berbasis web \n \nBAB I \nPENDAHULUAN \n \n1.1 Latar Belakang \nBank Rakyat Indonesia (BRI) merupakan salah satu bank milik negara yang \nmemiliki peran penting dalam memberikan layanan keuangan kepada masyarakat, \ntermasuk dalam hal pemberian kredit. Proses pengajuan dan pengelolaan kredit di \nBRI saat ini masih banyak dilakukan secara manual, mulai dari pengumpulan \ndokumen hingga verifikasi data nasabah. Hal ini dapat menyebabkan keterlambatan \ndalam proses persetujuan kredit dan meningkatkan risiko kesalahan data. \n \nDengan perkembangan teknologi informasi, khususnya teknologi berbasis web, \nterdapat peluang untuk meningkatkan efisiensi dan efektivitas dalam pengelolaan \nkredit nasabah. Sistem informasi manajemen kredit berbasis web dapat \nmemfasilitasi proses pengajuan, verifikasi, dan monitoring kredit secara real-time, \nserta mempermudah akses informasi bagi nasabah dan petugas bank. Implementasi \nsistem semacam ini telah dilakukan di beberapa unit BRI, seperti di Unit Kolonel \nSugiono, dengan menggunakan metode pengembangan Agile untuk memastikan \nsistem yang fleksibel dan sesuai kebutuhan pengguna. Repository Universitas \nNusamandiri STMIK Banjarbaru \n \n1.2 Identifikasi Masalah \nBerdasarkan dari latar belakang masalah, maka dapat diidentifikasi masalah dalam \npenelitian ini sebagai berikut : \na. Bagaimana merancang sistem informasi manajemen kredit nasabah berbasis \nweb yang dapat meningkatkan efisiensi proses pengajuan dan pengelolaan kredit \ndi Bank BRI? \nb. Apa saja kebutuhan fungsional dan non -fungsional yang harus dipenuhi oleh \nsistem informasi tersebut? \nc. Bagaimana metode pengembangan sistem yang tepat untuk memastikan sistem \ndapat diimplementasikan dengan efektif dan efisien? \n \n1.3 Batasan Masalah \nAgar penelitian lebih terfokus, dibatasi hal-hal berikut: \na. Merancang sistem informasi manajemen kredit nasabah berbasis web yang \ndapat meningkatkan efisiensi dan efektivitas proses pengajuan dan pengelolaan \nkredit di Bank BRI. \nb. Mengidentifikasi dan menganalisis kebutuhan fungsional dan non -fungsional \ndari sistem informasi tersebut. \nc. Menerapkan metode pengembangan sistem yang sesuai untuk menghasilkan \nsistem yang fleksibel dan mudah diadaptasi sesuai kebutuhan pengguna. \n \n1.4 Tujuan Penelitian \nAdapun tujuan dari penelitian ini adalah : \na. Merancang sistem informasi manajemen kredit nasabah berbasis web yang dapat \nmeningkatkan efisiensi dan efektivitas proses pengajuan dan pengelolaan kredit di \nBank BRI. \nb. Mengidentifikasi dan menganalisis kebutuhan fungsional dan non-fungsional dari \nsistem informasi tersebut. \nc. Menerapkan metode pengembangan sistem yang sesuai untuk menghasilkan sistem \nyang fleksibel dan mudah diadaptasi sesuai kebutuhan pengguna \n \n1.5 Manfaat Penelitian \nManfaat dari penelitian ini adalah \na. Bagi Bank BRI: Meningkatkan efisiensi operasional dalam pengelolaan kredit \nnasabah, mengurangi kesalahan data, dan mempercepat proses pengambilan \nkeputusan kredit. \nb. Bagi Nasabah: Mempermudah proses pengajuan kredit, meningkatkan transparansi \ninformasi, dan mempercepat proses persetujuan kredit. \nc. Bagi Peneliti dan Akademisi: Menambah referensi dan wawasan dalam bidang \npengembangan sistem informasi manajemen kredit berbasis web. \n \n \n1.6 Sistematika Penulisan \nAdapun sistematika penulisan jurnal ini adalah sebagai berikut: \na. Bab I : Pendahuluan \nb. Bab II : Tinjauan Pustaka \nc. Bab III : Metodologi Penelitian \nd. Bab IV : Hasil dan Pembahasan \ne. Bab V : Kesimpulan dan Saran",
+      "doc_name": "jurnal 1.pdf",
+      "chapters": [
+        {
+          "id": 0,
+          "title": "Pengantar Machine Learning",
+          "materials": [
+            {
+              "id": 0,
+              "title": "Apa itu Machine Learning?",
+              "duration": 60,
+              "type": "lesson",
+              "done": true
+            },
+            {
+              "id": 1,
+              "title": "Jenis-jenis Machine Learning (Supervised, Unsupervised, Reinforcement)",
+              "duration": 75,
+              "type": "lesson",
+              "done": true
+            },
+            {
+              "id": 2,
+              "title": "Aplikasi Umum Machine Learning",
+              "duration": 60,
+              "type": "lesson",
+              "done": true
+            },
+            {
+              "id": 3,
+              "title": "Quiz Chapter 1",
+              "duration": 30,
+              "type": "quiz",
+              "done": false
+            }
+          ]
+        },
+        {
+          "id": 1,
+          "title": "Dasar-dasar Data dan Algoritma",
+          "materials": [
+            {
+              "id": 0,
+              "title": "Memahami Data: Fitur, Label, dan Dataset",
+              "duration": 60,
+              "type": "lesson",
+              "done": false
+            },
+            {
+              "id": 1,
+              "title": "Preprocessing Data Sederhana (Scaling, Encoding)",
+              "duration": 75,
+              "type": "lesson",
+              "done": false
+            },
+            {
+              "id": 2,
+              "title": "Algoritma Klasifikasi Sederhana (Contoh: K-Nearest Neighbors)",
+              "duration": 90,
+              "type": "lesson",
+              "done": false
+            },
+            {
+              "id": 3,
+              "title": "Quiz Chapter 2",
+              "duration": 30,
+              "type": "quiz",
+              "done": false
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Model Pertama Anda",
+          "materials": [
+            {
+              "id": 0,
+              "title": "Konsep Overfitting dan Underfitting",
+              "duration": 60,
+              "type": "lesson",
+              "done": false
+            },
+            {
+              "id": 1,
+              "title": "Evaluasi Model Sederhana (Akurasi)",
+              "duration": 60,
+              "type": "lesson",
+              "done": false
+            },
+            {
+              "id": 2,
+              "title": "Studi Kasus: Prediksi Sederhana Menggunakan Python (Contoh Dasar)",
+              "duration": 120,
+              "type": "lesson",
+              "done": false
+            },
+            {
+              "id": 3,
+              "title": "Quiz Chapter 3",
+              "duration": 30,
+              "type": "quiz",
+              "done": false
+            }
+          ]
+        }
+      ],
+      "streak": 1,
+      "plan_generated": false,
+      "created_at": "2026-05-27T11:16:26.749245"
+    },
+    {
+      "id": 4,
+      "user_id": 4,
+      "name": "UAS",
+      "topics": "Sosiologi",
+      "level": "Beginner",
+      "deadline": "2026-05-27",
+      "progress": 0,
+      "last_checked": "27 May 2026",
+      "doc_text": "",
+      "doc_name": "",
+      "chapters": [],
+      "streak": 1,
+      "plan_generated": false,
+      "created_at": "2026-05-27T11:22:39.489276"
+    },
+    {
+      "id": 5,
+      "user_id": 1,
+      "name": "UTS",
+      "topics": "e.g",
+      "level": "Beginner",
+      "deadline": "2026-05-30",
+      "progress": 0,
+      "last_checked": "28 May 2026",
+      "doc_text": "",
+      "doc_name": "",
+      "chapters": [],
+      "streak": 1,
+      "plan_generated": false,
+      "created_at": "2026-05-28T21:38:26.344105"
+    },
+    {
+      "id": 9,
+      "user_id": 9,
+      "name": "Uas",
+      "topics": "matematika",
+      "level": "Beginner",
+      "deadline": "2026-06-30",
+      "progress": 26,
+      "last_checked": "01 Jun 2026",
+      "doc_text": "",
+      "doc_name": "",
+      "chapters": [],
+      "streak": 1,
+      "plan_generated": false,
+      "created_at": "2026-06-01T10:47:49.305353"
+    },
+    {
+      "id": 10,
+      "user_id": 9,
+      "name": "Uts",
+      "topics": "Bahasa indonesia",
+      "level": "Beginner",
+      "deadline": "2026-06-01",
+      "progress": 25,
+      "last_checked": "01 Jun 2026",
+      "doc_text": "",
+      "doc_name": "",
+      "chapters": [],
+      "streak": 1,
+      "plan_generated": false,
+      "created_at": "2026-06-01T11:27:29.851665"
+    }
+  ],
+  "quiz_history": [
+    {
+      "id": 3,
+      "session_id": 3,
+      "topic": "Chapter 1 - Pengantar Machine Learning",
+      "level": "Beginner",
+      "score": 60,
+      "analysis": "Cukup baik, perlu latihan lagi.",
+      "created_at": "2026-05-27T11:33:18.073216"
+    },
+    {
+      "id": 20,
+      "session_id": 1,
+      "topic": "Chapter 1 - Pengantar Ilmu Data dan Lingkungan",
+      "level": "Beginner",
+      "score": 0,
+      "analysis": "Perlu ulang materi ini.",
+      "created_at": "2026-05-28T16:06:56.584398"
+    },
+    {
+      "id": 21,
+      "session_id": 1,
+      "topic": "Chapter 2 - Pengumpulan dan Pemrosesan Data",
+      "level": "Beginner",
+      "score": 100,
+      "analysis": "Pemahaman sangat baik!",
+      "created_at": "2026-05-28T16:06:56.584436"
+    },
+    {
+      "id": 22,
+      "session_id": 1,
+      "topic": "Chapter 3 - Analisis Data Deskriptif dan Visualisasi",
+      "level": "Beginner",
+      "score": 40,
+      "analysis": "Perlu ulang materi ini.",
+      "created_at": "2026-05-28T16:06:56.584448"
+    },
+    {
+      "id": 39,
+      "session_id": 9,
+      "topic": "Chapter 1 - Dasar-Dasar Aritmatika",
+      "level": "Beginner",
+      "score": 80,
+      "analysis": "Pemahaman sangat baik!",
+      "created_at": "2026-06-01T11:50:55.603301"
+    }
+  ],
+  "study_plans": [],
+  "next_ids": {
+    "user_id": 10,
+    "session_id": 11,
+    "quiz_id": 40,
+    "plan_id": 1,
+    "chat_id": 27
+  },
+  "chat_messages": [
+    {
+      "id": 20,
+      "user_id": 1,
+      "role": "user",
+      "type": "text",
+      "content": "halo",
+      "doc_name": "",
+      "topic": "",
+      "level": "",
+      "data": null,
+      "saved_at": "2026-05-27T10:14:30.016023"
+    },
+    {
+      "id": 21,
+      "user_id": 1,
+      "role": "assistant",
+      "type": "text",
+      "content": "Halo! Ada yang bisa saya bantu?",
+      "doc_name": "",
+      "topic": "",
+      "level": "",
+      "data": null,
+      "saved_at": "2026-05-27T10:14:30.016052"
+    },
+    {
+      "id": 22,
+      "user_id": 1,
+      "role": "user",
+      "type": "text",
+      "content": "makanan khas medan apa?",
+      "doc_name": "",
+      "topic": "",
+      "level": "",
+      "data": null,
+      "saved_at": "2026-05-27T10:14:30.016063"
+    },
+    {
+      "id": 23,
+      "user_id": 1,
+      "role": "assistant",
+      "type": "text",
+      "content": "Medan menawarkan berbagai macam kuliner khas yang kaya rasa dan berakar dari keberagaman budayanya. Masakan Medan dipengaruhi oleh tradisi Melayu, Batak, Tionghoa, dan India, sehingga cita rasanya cenderung gurih, pedas, dan sedikit asam, dengan penggunaan rempah-rempah yang melimpah.\n\nBeberapa makanan khas Medan yang wajib dicoba antara lain:\n\n*   **Soto Medan:** Dikenal dengan kuahnya yang berwarna kuning pekat, terbuat dari campuran santan dan rempah-rempah. Biasanya disajikan dengan isian ayam kampung, daging sapi, atau udang, serta pelengkap seperti tauge, telur rebus, perkedel kentang, dan emping.\n*   **Mie Gomak:** Hidangan mi khas Batak Toba yang terbuat dari mi berukuran besar. Bisa disajikan digoreng atau berkuah, dengan saus kacang atau saus \"longong\".\n*   **Lontong Medan:** Terdiri dari lontong yang disiram kuah santan tauco dengan cita rasa gurih, asam, dan sedikit pedas. Dilengkapi dengan kacang panjang, teri balado, telur rebus, bihun goreng, dan kerupuk merah.\n*   **Bika Ambon:** Kue tradisional bertekstur lembut, kenyal, dan berongga, dengan rasa manis legit. Meskipun bernama Bika Ambon, kue ini berasal dari Medan.\n*   **Pancake Durian:** Camilan manis yang menggunakan durian sebagai isiannya, populer di kalangan pecinta durian.\n*   **Kari Bihun:** Perpaduan kari dengan bihun, yang seringkali menjadi menu andalan di rumah makan tertentu di Medan.\n*   **Bihun Bebek:** Bihun lembut yang disajikan dengan kaldu bebek kaya rempah dan dikenal menyehatkan karena mengandung ramuan herbal.\n*   **Nasi Lemak:** Nasi yang dimasak dengan santan dan disajikan dengan lauk seperti ikan teri, telur, sambal, dan acar.\n*   **Mie Sop:** Mirip soto, hidangan ini menggunakan bihun atau mie kuning dengan kaldu ayam kampung berempah, disajikan dengan sambal rawit dan perasan jeruk nipis.\n*   **Selai Srikaya:** Makanan ringan khas Medan yang terbuat dari srikaya.\n*   **Kwetiau Goreng:** Kwetiau yang digoreng, seringkali ditumis bersama seafood.\n*   **Rujak Kolam:** Salad khas Medan yang disajikan dengan saus asam pedas.\n*   **Bolu Meranti:** Kue bolu gulung yang terkenal sebagai oleh-oleh khas Medan.\n*   **Lapet:** Kue tradisional khas suku Batak yang terbuat dari tepung beras dan gula merah, dibungkus daun pisang.\n*   **Sayur Gurih Tauco:** Hidangan sayuran yang dimasak dengan bumbu tauco, menghasilkan rasa gurih dan sedikit pedas.\n*   **Sate Kerang:** Sate yang terbuat dari kerang dengan bumbu khas yang gurih dan sedikit pedas.\n*   **Kopi Sidikalang:** Kopi khas yang berasal dari daerah Sidikalang, Dairi, terbuat dari biji kopi robusta dan arabika.\n\nKeunikan bumbu dan cara pengolahan yang kaya rempah membuat kuliner Medan sangat istimewa dan menjadi daya tarik bagi wisatawan.",
+      "doc_name": "",
+      "topic": "",
+      "level": "",
+      "data": null,
+      "saved_at": "2026-05-27T10:14:30.016074"
+    },
+    {
+      "id": 24,
+      "user_id": 1,
+      "role": "assistant",
+      "type": "text",
+      "content": "📄 Dokumen <b>jurnal kedelei ijau.pdf</b> berhasil dibaca (20,186 karakter).<br>Kamu bisa bertanya isi dokumen atau membuat quiz dari dokumen.",
+      "doc_name": "",
+      "topic": "",
+      "level": "",
+      "data": null,
+      "saved_at": "2026-05-27T10:14:30.016084"
+    },
+    {
+      "id": 25,
+      "user_id": 1,
+      "role": "user",
+      "type": "text",
+      "content": "inti penting dari file itu apa?",
+      "doc_name": "",
+      "topic": "",
+      "level": "",
+      "data": null,
+      "saved_at": "2026-05-27T10:14:30.016094"
+    },
+    {
+      "id": 26,
+      "user_id": 1,
+      "role": "assistant",
+      "type": "text",
+      "content": "Inti penting dari dokumen ini adalah mengenai **sistem pakar untuk diagnosa penyakit tanaman kedelai**.\n\nBerikut penjelasan singkatnya:\n\n*   **Penyakit Kedelai:** Dokumen ini menyebutkan beberapa contoh penyakit kedelai, seperti Karat Daun dan Busuk Rhizoktonia, serta menjelaskan gejalanya.\n*   **Sistem Pakar:** Bagian pentingnya adalah perancangan sistem pakar. Sistem pakar ini berfungsi untuk membantu pengguna mendiagnosa penyakit kedelai berdasarkan gejala yang dimasukkan.\n*   **Basis Pengetahuan:** Inti dari sistem pakar ini adalah \"Basis Pengetahuan\" yang berisi aturan dan data tentang penyakit kedelai.\n*   **Rekomendasi Pakar:** Sistem akan memberikan rekomendasi atau solusi berdasarkan hasil diagnosa.\n*   **Metode Teorema Bayes:** Dokumen ini menyebutkan bahwa sistem menggunakan metode Teorema Bayes untuk melakukan perhitungan dan penyeleksian gejala terhadap penyakit, sehingga menghasilkan diagnosa yang kemungkinan.\n\nJadi, secara keseluruhan, dokumen ini menjelaskan tentang bagaimana sebuah sistem pakar dirancang untuk mengenali dan memberikan rekomendasi penyakit pada tanaman kedelai menggunakan pengetahuan dari pakar dan metode perhitungan tertentu.",
+      "doc_name": "",
+      "topic": "",
+      "level": "",
+      "data": null,
+      "saved_at": "2026-05-27T10:14:30.016105"
+    }
+  ],
+  "chats": {
+    "2": [
+      {
+        "role": "user",
+        "content": "halo",
+        "doc_name": ""
+      },
+      {
+        "role": "assistant",
+        "type": "text",
+        "content": "⏳ AI sedang memproses..."
+      }
+    ],
+    "6": [
+      {
+        "role": "user",
+        "content": "halo",
+        "doc_name": ""
+      },
+      {
+        "role": "assistant",
+        "type": "text",
+        "content": "⏳ AI sedang memproses..."
+      }
+    ],
+    "1": [
+      {
+        "role": "assistant",
+        "type": "text",
+        "content": "📄 Dokumen <b>jurnal kedelei ijau.pdf</b> berhasil dibaca (20,186 karakter).<br>Kamu bisa bertanya isi dokumen atau membuat quiz dari dokumen."
+      }
+    ],
+    "8": [
+      {
+        "role": "user",
+        "content": "halo",
+        "doc_name": ""
+      },
+      {
+        "role": "assistant",
+        "type": "text",
+        "content": "Halo! Ada yang bisa saya bantu?"
+      }
+    ],
+    "3": [
+      {
+        "role": "user",
+        "content": "halo",
+        "doc_name": ""
+      },
+      {
+        "role": "assistant",
+        "type": "text",
+        "content": "Halo! Ada yang bisa saya bantu?"
+      }
+    ],
+    "9": [
+      {
+        "role": "user",
+        "content": "buatkan quiz ipa?",
+        "doc_name": ""
+      },
+      {
+        "role": "assistant",
+        "type": "level_select",
+        "content": "Oke! Quiz tentang <b>Ipa?</b>. Pilih level:",
+        "topic": "Ipa?"
+      },
+      {
+        "role": "user",
+        "content": "Level: Mudah"
+      },
+      {
+        "role": "assistant",
+        "type": "quiz",
+        "content": "",
+        "data": {
+          "questions": [
+            {
+              "question": "Bagian tubuh tumbuhan yang berfungsi menyerap air dan nutrisi dari tanah adalah?",
+              "options": [
+                "A. Daun",
+                "B. Batang",
+                "C. Akar",
+                "D. Bunga"
+              ],
+              "answer": 2
+            },
+            {
+              "question": "Hewan yang hidup di darat dan di air disebut hewan?",
+              "options": [
+                "A. Karnivora",
+                "B. Herbivora",
+                "C. Omnivora",
+                "D. Amfibi"
+              ],
+              "answer": 3
+            },
+            {
+              "question": "Sumber energi utama bagi tumbuhan untuk membuat makanannya sendiri adalah?",
+              "options": [
+                "A. Air",
+                "B. Udara",
+                "C. Cahaya matahari",
+                "D. Tanah"
+              ],
+              "answer": 2
+            },
+            {
+              "question": "Manakah di bawah ini yang termasuk benda mati?",
+              "options": [
+                "A. Pohon",
+                "B. Ikan",
+                "C. Batu",
+                "D. Burung"
+              ],
+              "answer": 2
+            },
+            {
+              "question": "Proses perubahan bentuk pada hewan seperti katak dari berudu menjadi katak dewasa disebut?",
+              "options": [
+                "A. Fertilisasi",
+                "B. Metamorfosis",
+                "C. Respirasi",
+                "D. Fotosintesis"
+              ],
+              "answer": 1
+            }
+          ],
+          "topic": "Ipa?",
+          "level": "Mudah"
+        }
+      },
+      {
+        "role": "assistant",
+        "type": "text",
+        "content": "📄 Dokumen <b>Agent Planning vs Execution – Analyze Behavior Across Tasks.pdf</b> berhasil dibaca (19,903 karakter).<br>Kamu bisa bertanya isi dokumen atau membuat quiz dari dokumen."
+      },
+      {
+        "role": "user",
+        "content": "apa makna dari file yang baru aku kirem itu tolong berikan rangkuman maknyanya ?",
+        "doc_name": ""
+      },
+      {
+        "role": "assistant",
+        "type": "text",
+        "content": "Tentu, mari saya jelaskan makna dari dokumen yang Anda kirimkan dengan mudah dipahami dalam Bahasa Indonesia.\n\nDokumen ini menjelaskan sebuah proses yang disebut **\"Plan-then-Execute\"** (Rencanakan lalu Eksekusi) dalam konteks membuat resep masakan, khususnya dalam hal membuat resep menjadi bebas gluten (gluten-free/GF).\n\nSecara garis besar, dokumen ini membandingkan dua cara untuk menjalankan sebuah tugas:\n\n1.  **Direct Execution (Eksekusi Langsung):** Cara ini langsung melakukan tugas tanpa perencanaan terperinci sebelumnya.\n2.  **Plan-then-Execute (Rencanakan lalu Eksekusi):** Cara ini pertama-tama membuat rencana langkah demi langkah sebelum benar-benar menjalankan tugasnya.\n\nDalam dokumen tersebut, **\"Plan-then-Execute\" dianggap jauh lebih baik** karena memberikan kejelasan dan transparansi yang lebih tinggi.\n\nBerikut adalah rangkuman maknanya berdasarkan isi dokumen:\n\n*   **Tujuan Dokumen:** Dokumen ini menjelaskan langkah-langkah rinci untuk membuat resep masakan yang diskalakan (diubah ukurannya) menjadi bebas gluten. Proses ini disebut \"Plan-then-Execute\".\n*   **Proses \"Plan-then-Execute\" (Langkah demi Langkah):**\n    1.  **Hitung faktor skala:** Menentukan seberapa besar resep perlu diubah ukurannya.\n    2.  **Skalakan jumlah bahan:** Mengalikan jumlah setiap bahan dengan faktor skala yang sudah dihitung.\n    3.  **Identifikasi bahan bergluten:** Menemukan bahan-bahan dalam resep yang mengandung gluten.\n    4.  **Tentukan pengganti bebas gluten:** Mencari bahan pengganti yang cocok untuk bahan-bahan yang mengandung gluten.\n    5.  **Ganti bahan bergluten:** Mengganti bahan yang mengandung gluten dengan pengganti bebas gluten yang sudah ditentukan.\n    6.  **Sajikan resep akhir:** Menampilkan resep bebas gluten yang sudah diskalakan dengan takaran yang jelas.\n*   **Keunggulan \"Plan-then-Execute\":**\n    *   **Auditabilitas (Kemampuan untuk Diperiksa):** Setiap langkah dalam proses ini dapat diperiksa secara individual. Ini berarti kita bisa melihat dengan jelas bagaimana setiap keputusan dibuat.\n    *   **Kejelasan Penalaran (Reasoning Clarity):** Proses ini sangat transparan. Model (atau siapa pun yang menjalankan prosesnya) harus menunjukkan secara eksplisit apa yang dilakukannya di setiap langkah. Contohnya:\n        *   Bagaimana faktor skala dihitung (misalnya, 48/24 = 2).\n        *   Bagaimana bahan bergluten diidentifikasi (dengan justifikasi ilmiah).\n        *   Bagaimana pengganti bebas gluten dipilih (misalnya, tepung beras + tapioka + xanthan gum).\n\n**Kesimpulan Sederhananya:**\n\nDokumen ini menjelaskan sebuah metode cerdas untuk mengubah resep masakan agar sesuai dengan kebutuhan diet bebas gluten, dan metode ini bekerja dengan cara membuat rencana rinci terlebih dahulu sebelum melaksanakannya. Metode ini sangat baik karena setiap langkahnya jelas, bisa diperiksa, dan mudah dipahami alasannya."
+      },
+      {
+        "role": "user",
+        "content": "siapa nama presiden sekarang ?",
+        "doc_name": ""
+      },
+      {
+        "role": "assistant",
+        "type": "text",
+        "content": "Presiden Indonesia saat ini adalah Prabowo Subianto. Beliau menjabat sejak 20 Oktober 2024."
+      }
+    ]
+  },
+  "chat_history": {
+    "8": [
+      {
+        "id": "1779954779809383",
+        "title": "halo",
+        "messages": [
+          {
+            "role": "user",
+            "content": "halo",
+            "doc_name": ""
+          },
+          {
+            "role": "assistant",
+            "type": "text",
+            "content": "Halo! Ada yang bisa saya bantu?"
+          }
+        ],
+        "timestamp": "28 May 2026, 14:52"
+      }
+    ],
+    "1": [
+      {
+        "id": "1779976335023227",
+        "title": "New Chat",
+        "messages": [
+          {
+            "role": "assistant",
+            "type": "text",
+            "content": "📄 Dokumen <b>jurnal kedelei ijau.pdf</b> berhasil dibaca (20,186 karakter).<br>Kamu bisa bertanya isi dokumen atau membuat quiz dari dokumen."
+          }
+        ],
+        "timestamp": "28 May 2026, 20:52"
+      },
+      {
+        "id": "1779956136601814",
+        "title": "buatkan aku quiz dong",
+        "messages": [
+          {
+            "role": "user",
+            "content": "buatkan aku quiz dong",
+            "doc_name": ""
+          },
+          {
+            "role": "assistant",
+            "type": "text",
+            "content": "Mau quiz tentang topik apa? 📚"
+          },
+          {
+            "role": "user",
+            "content": "tentang sosiologi",
+            "doc_name": ""
+          },
+          {
+            "role": "assistant",
+            "type": "level_select",
+            "content": "Oke! Quiz tentang <b>Tentang Sosiologi</b>. Pilih level:",
+            "topic": "Tentang Sosiologi"
+          },
+          {
+            "role": "user",
+            "content": "Level: Mudah"
+          },
+          {
+            "role": "assistant",
+            "type": "quiz",
+            "content": "",
+            "data": {
+              "questions": [
+                {
+                  "question": "Sosiologi berasal dari bahasa Latin 'socius' yang berarti...",
+                  "options": [
+                    "Ilmu",
+                    "Teman atau Masyarakat",
+                    "Hubungan",
+                    "Perilaku"
+                  ],
+                  "answer": 1
+                },
+                {
+                  "question": "Siapa yang dianggap sebagai bapak sosiologi?",
+                  "options": [
+                    "Max Weber",
+                    "Emile Durkheim",
+                    "Auguste Comte",
+                    "Karl Marx"
+                  ],
+                  "answer": 2
+                },
+                {
+                  "question": "Objek kajian utama dalam sosiologi adalah...",
+                  "options": [
+                    "Sejarah",
+                    "Alam",
+                    "Masyarakat",
+                    "Budaya"
+                  ],
+                  "answer": 2
+                },
+                {
+                  "question": "Salah satu cabang sosiologi yang mempelajari pengetahuan manusia dalam proses sosial adalah...",
+                  "options": [
+                    "Sosiologi Agama",
+                    "Sosiologi Hukum",
+                    "Sosiologi Pendidikan",
+                    "Sosiologi Pengetahuan"
+                  ],
+                  "answer": 3
+                },
+                {
+                  "question": "Sosiologi mempelajari tentang fakta sosial menurut pendapat dari tokoh...",
+                  "options": [
+                    "Max Weber",
+                    "Auguste Comte",
+                    "Emile Durkheim",
+                    "Herbert Spencer"
+                  ],
+                  "answer": 2
+                }
+              ],
+              "topic": "Tentang Sosiologi",
+              "level": "Mudah"
+            }
+          }
+        ],
+        "timestamp": "28 May 2026, 15:15"
+      },
+      {
+        "id": "1779954834237576",
+        "title": "halo",
+        "messages": [
+          {
+            "role": "user",
+            "content": "halo",
+            "doc_name": ""
+          },
+          {
+            "role": "assistant",
+            "type": "text",
+            "content": "Halo! Ada yang bisa saya bantu?"
+          }
+        ],
+        "timestamp": "28 May 2026, 14:53"
+      }
+    ],
+    "3": [
+      {
+        "id": "1779983492470982",
+        "title": "New Chat",
+        "messages": [],
+        "timestamp": "28 May 2026, 22:51"
+      },
+      {
+        "id": "1779976810854797",
+        "title": "halo",
+        "messages": [
+          {
+            "role": "user",
+            "content": "halo",
+            "doc_name": ""
+          },
+          {
+            "role": "assistant",
+            "type": "text",
+            "content": "Halo! Ada yang bisa saya bantu?"
+          },
+          {
+            "role": "user",
+            "content": "mau nnyk dong",
+            "doc_name": ""
+          },
+          {
+            "role": "assistant",
+            "type": "text",
+            "content": "Tentu, silakan ajukan pertanyaan Anda. Saya akan berusaha menjawabnya dengan jelas."
+          }
+        ],
+        "timestamp": "28 May 2026, 21:00"
+      }
+    ],
+    "9": [
+      {
+        "id": "17802817247009",
+        "title": "buatkan quiz ipa?",
+        "messages": [
+          {
+            "role": "user",
+            "content": "buatkan quiz ipa?",
+            "doc_name": ""
+          },
+          {
+            "role": "assistant",
+            "type": "level_select",
+            "content": "Oke! Quiz tentang <b>Ipa?</b>. Pilih level:",
+            "topic": "Ipa?"
+          },
+          {
+            "role": "user",
+            "content": "Level: Mudah"
+          },
+          {
+            "role": "assistant",
+            "type": "quiz",
+            "content": "",
+            "data": {
+              "questions": [
+                {
+                  "question": "Bagian tubuh tumbuhan yang berfungsi menyerap air dan nutrisi dari tanah adalah?",
+                  "options": [
+                    "A. Daun",
+                    "B. Batang",
+                    "C. Akar",
+                    "D. Bunga"
+                  ],
+                  "answer": 2
+                },
+                {
+                  "question": "Hewan yang hidup di darat dan di air disebut hewan?",
+                  "options": [
+                    "A. Karnivora",
+                    "B. Herbivora",
+                    "C. Omnivora",
+                    "D. Amfibi"
+                  ],
+                  "answer": 3
+                },
+                {
+                  "question": "Sumber energi utama bagi tumbuhan untuk membuat makanannya sendiri adalah?",
+                  "options": [
+                    "A. Air",
+                    "B. Udara",
+                    "C. Cahaya matahari",
+                    "D. Tanah"
+                  ],
+                  "answer": 2
+                },
+                {
+                  "question": "Manakah di bawah ini yang termasuk benda mati?",
+                  "options": [
+                    "A. Pohon",
+                    "B. Ikan",
+                    "C. Batu",
+                    "D. Burung"
+                  ],
+                  "answer": 2
+                },
+                {
+                  "question": "Proses perubahan bentuk pada hewan seperti katak dari berudu menjadi katak dewasa disebut?",
+                  "options": [
+                    "A. Fertilisasi",
+                    "B. Metamorfosis",
+                    "C. Respirasi",
+                    "D. Fotosintesis"
+                  ],
+                  "answer": 1
+                }
+              ],
+              "topic": "Ipa?",
+              "level": "Mudah"
+            }
+          },
+          {
+            "role": "assistant",
+            "type": "text",
+            "content": "📄 Dokumen <b>Agent Planning vs Execution – Analyze Behavior Across Tasks.pdf</b> berhasil dibaca (19,903 karakter).<br>Kamu bisa bertanya isi dokumen atau membuat quiz dari dokumen."
+          },
+          {
+            "role": "user",
+            "content": "apa makna dari file yang baru aku kirem itu tolong berikan rangkuman maknyanya ?",
+            "doc_name": ""
+          },
+          {
+            "role": "assistant",
+            "type": "text",
+            "content": "Tentu, mari saya jelaskan makna dari dokumen yang Anda kirimkan dengan mudah dipahami dalam Bahasa Indonesia.\n\nDokumen ini menjelaskan sebuah proses yang disebut **\"Plan-then-Execute\"** (Rencanakan lalu Eksekusi) dalam konteks membuat resep masakan, khususnya dalam hal membuat resep menjadi bebas gluten (gluten-free/GF).\n\nSecara garis besar, dokumen ini membandingkan dua cara untuk menjalankan sebuah tugas:\n\n1.  **Direct Execution (Eksekusi Langsung):** Cara ini langsung melakukan tugas tanpa perencanaan terperinci sebelumnya.\n2.  **Plan-then-Execute (Rencanakan lalu Eksekusi):** Cara ini pertama-tama membuat rencana langkah demi langkah sebelum benar-benar menjalankan tugasnya.\n\nDalam dokumen tersebut, **\"Plan-then-Execute\" dianggap jauh lebih baik** karena memberikan kejelasan dan transparansi yang lebih tinggi.\n\nBerikut adalah rangkuman maknanya berdasarkan isi dokumen:\n\n*   **Tujuan Dokumen:** Dokumen ini menjelaskan langkah-langkah rinci untuk membuat resep masakan yang diskalakan (diubah ukurannya) menjadi bebas gluten. Proses ini disebut \"Plan-then-Execute\".\n*   **Proses \"Plan-then-Execute\" (Langkah demi Langkah):**\n    1.  **Hitung faktor skala:** Menentukan seberapa besar resep perlu diubah ukurannya.\n    2.  **Skalakan jumlah bahan:** Mengalikan jumlah setiap bahan dengan faktor skala yang sudah dihitung.\n    3.  **Identifikasi bahan bergluten:** Menemukan bahan-bahan dalam resep yang mengandung gluten.\n    4.  **Tentukan pengganti bebas gluten:** Mencari bahan pengganti yang cocok untuk bahan-bahan yang mengandung gluten.\n    5.  **Ganti bahan bergluten:** Mengganti bahan yang mengandung gluten dengan pengganti bebas gluten yang sudah ditentukan.\n    6.  **Sajikan resep akhir:** Menampilkan resep bebas gluten yang sudah diskalakan dengan takaran yang jelas.\n*   **Keunggulan \"Plan-then-Execute\":**\n    *   **Auditabilitas (Kemampuan untuk Diperiksa):** Setiap langkah dalam proses ini dapat diperiksa secara individual. Ini berarti kita bisa melihat dengan jelas bagaimana setiap keputusan dibuat.\n    *   **Kejelasan Penalaran (Reasoning Clarity):** Proses ini sangat transparan. Model (atau siapa pun yang menjalankan prosesnya) harus menunjukkan secara eksplisit apa yang dilakukannya di setiap langkah. Contohnya:\n        *   Bagaimana faktor skala dihitung (misalnya, 48/24 = 2).\n        *   Bagaimana bahan bergluten diidentifikasi (dengan justifikasi ilmiah).\n        *   Bagaimana pengganti bebas gluten dipilih (misalnya, tepung beras + tapioka + xanthan gum).\n\n**Kesimpulan Sederhananya:**\n\nDokumen ini menjelaskan sebuah metode cerdas untuk mengubah resep masakan agar sesuai dengan kebutuhan diet bebas gluten, dan metode ini bekerja dengan cara membuat rencana rinci terlebih dahulu sebelum melaksanakannya. Metode ini sangat baik karena setiap langkahnya jelas, bisa diperiksa, dan mudah dipahami alasannya."
+          },
+          {
+            "role": "user",
+            "content": "siapa nama presiden sekarang ?",
+            "doc_name": ""
+          },
+          {
+            "role": "assistant",
+            "type": "text",
+            "content": "Presiden Indonesia saat ini adalah Prabowo Subianto. Beliau menjabat sejak 20 Oktober 2024."
+          }
+        ],
+        "timestamp": "01 Jun 2026, 09:42"
+      }
+    ]
+  }
+}

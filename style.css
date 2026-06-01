@@ -1,0 +1,279 @@
+.main {
+    background-color: #8867e9;
+}
+
+.card {
+    background: rgb(34, 89, 240);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    margin: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+    font-weight: bold;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* ─── RESET & BASE ─────────────────────────── */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+[data-testid="stAppViewContainer"] {
+    background: #f9f9f9;
+}
+
+/* Sembunyikan sidebar bawaan Streamlit */
+[data-testid="stSidebar"] { display: none !important; }
+section[data-testid="stSidebarContent"] { display: none !important; }
+
+/* Sembunyikan header bawaan Streamlit */
+[data-testid="stHeader"] { display: none !important; }
+
+/* Hapus padding container Streamlit */
+/* Hapus semua padding bawaan Streamlit */
+.block-container {
+    padding-top: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-bottom: 0 !important;
+    max-width: 100% !important;
+}
+
+[data-testid="stAppViewContainer"] {
+    background: #f9f9f9;
+    padding: 0 !important;
+}
+
+[data-testid="stAppViewBlock"] {
+    padding: 0 !important;
+}
+
+/* Hapus gap di atas */
+.stApp {
+    margin-top: 0 !important;
+}
+
+div[data-testid="stVerticalBlock"] {
+    gap: 0 !important;
+    padding: 0 !important;
+}
+
+/* ─── NAVBAR ────────────────────────────────── */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 48px;
+    background: #1a2744;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+    border-radius: 0;
+
+    /* Paksa st.columns navbar rata kanan */
+div[data-testid="stHorizontalBlock"] {
+    background: #1a2744;
+    padding: 0 48px 10px 48px;
+    gap: 8px;
+    margin-top: -12px;
+    justify-content: flex-end !important;
+}
+}
+
+.navbar-brand {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+}
+
+.navbar-brand span {
+    color: #4f8ef7;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 8px;
+    list-style: none;
+}
+
+.nav-btn {
+    padding: 8px 18px;
+    border-radius: 8px;
+    border: none;
+    background: transparent;
+    color: rgba(255,255,255,0.75);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+
+.nav-btn:hover {
+    background: rgba(255,255,255,0.1);
+    color: #ffffff;
+}
+
+.nav-btn.active {
+    background: #4f8ef7;
+    color: #fff !important;
+    font-weight: 600;
+}
+
+/* ─── HERO ──────────────────────────────────── */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 80px 60px 80px;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.hero-left { flex: 1; }
+
+.hero-tag {
+    display: inline-block;
+    background: #e8f0fe;
+    color: #4f8ef7;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #1a1a2e;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.hero h1 span { color: #4f8ef7; }
+
+.hero p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 32px;
+    max-width: 480px;
+}
+
+.hero-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+
+.btn-primary {
+    padding: 14px 28px;
+    background: #4f8ef7;
+    color: rgb(37, 34, 34);
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+
+.btn-primary:hover { background: #3a7be0; transform: translateY(-1px); }
+
+.btn-secondary {
+    padding: 14px 28px;
+    background: transparent;
+    color: #4f8ef7;
+    border: 2px solid #4f8ef7;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+
+.btn-secondary:hover { background: #f0f4ff; }
+
+.hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-illustration {
+    width: 420px;
+    height: 320px;
+    background: linear-gradient(135deg, #e8f0fe 0%, #dbeafe 100%);
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 7rem;
+    box-shadow: 0 20px 60px rgba(79,142,247,0.15);
+}
+
+/* ─── FEATURE CARDS ─────────────────────────── */
+.features {
+    padding: 20px 80px 80px 80px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.features h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 24px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.feature-card {
+    background: rgb(198, 194, 194);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    transition: all 0.2s;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    border-color: #4f8ef7;
+    box-shadow: 0 8px 30px rgba(79,142,247,0.15);
+}
+
+.feature-icon { font-size: 2.2rem; margin-bottom: 12px; }
+.feature-card h3 { font-size: 1rem; font-weight: 700; color: #1a1a2e; margin-bottom: 6px; }
+.feature-card p { font-size: 0.85rem; color: #888; line-height: 1.5; }
+
+/* ─── CONTENT AREA ──────────────────────────── */
+.content-area {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 80px;
+}
+
+/* Sembunyikan elemen Streamlit yang tidak perlu */
+#MainMenu { visibility: hidden; }
+footer { visibility: hidden; }
+.stDeployButton { display: none; }
+/* Full screen home */
+.home-wrapper {
+    width: 100vw !important;
+    margin-left: calc(-50vw + 50%) !important;
+}
+
+[data-testid="stAppViewContainer"] > div:first-child {
+    padding: 0 !important;
+}
